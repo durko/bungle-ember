@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>{{name}}</title>
+
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no" />
+    <meta name="apple-mobile-web-app-capable" content="yes" />
+    <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+
+    <!--[if lt IE 9]>
+    <script src="http://html5shiv.googlecode.com/svn/trunk/html5.js"></script>
+    <![endif]-->
+
+{{#modules}}
+    <link rel="stylesheet" href="style/style.css" />
+{{#es6}}
+    <script src="{{vendordir}}/traceur/traceur.js"></script>
+    <script src="{{vendordir}}/es6-module-loader/dist/es6-module-loader-sans-promises.js"></script>
+    <script>//System.import("app/main");</script>
+{{/es6}}
+{{^es6}}
+    <script src="{{vendordir}}/requirejs/require.js" data-main="app/main.js"></script>
+{{/es6}}
+{{/modules}}
+
+{{^modules}}
+    <link rel="stylesheet" href="dist/main-built.css" />
+    <script src="dist/main-built.js"></script>
+{{/modules}}
+  </head>
+  <body>
+  </body>
+</html>

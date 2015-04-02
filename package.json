@@ -1,0 +1,20 @@
+{
+  "name": "bungle-ember",
+  "version": "0.0.0",
+  "description": "Bungle pipeline template for ember applications.",
+  "author": "Marko Durkovic <marko@miding.de> (https://github.com/durko)",
+  "license": "MIT",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/durko/bungle-ember"
+  },
+  "dependencies": {
+    "bungle": "~0.3.0"
+  },
+  "devDependencies": {},
+  "main": "index.js",
+  "bin": "./bin/bungle-ember",
+  "scripts": {
+    "prepublish": "coffee -c index.coffee"
+  }
+}

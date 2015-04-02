@@ -1,0 +1,7 @@
+{
+    "name": "bungle-ember example",
+    "dependencies": {
+        "ember": "",
+        "requirejs": ""
+    }
+}
